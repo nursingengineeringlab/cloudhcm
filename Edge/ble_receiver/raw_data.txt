@@ -1,0 +1,671 @@
+pi@raspberrypi:~ $ ./start_grandma.sh 
+BLE: Starting BLE Receiver
+BLE: [(1, 'Flags', '06'), (255, 'Manufacturer', '4c001005421cbc3ace')]
+BLE: [(1, 'Flags', '1a'), (10, 'Tx Power', '0c'), (255, 'Manufacturer', '4c001006121afbd8fecb')]
+BLE: [(3, 'Complete 16b Services', '0000fd6f-0000-1000-8000-00805f9b34fb'), (22, '16b Service Data', '6ffdbd6bb95c9b1b9c32469ee2cbd40c7f8cd197b517')]
+BLE: [(1, 'Flags', '1a'), (10, 'Tx Power', '07'), (255, 'Manufacturer', '4c0010062d1ee2177aaf')]
+BLE: [(1, 'Flags', '1a'), (10, 'Tx Power', '0c'), (255, 'Manufacturer', '4c001006001dc971d628')]
+BLE: [(1, 'Flags', '1a'), (10, 'Tx Power', '06'), (255, 'Manufacturer', '4c0010072b1f264d31ea08')]
+BLE: [(1, 'Flags', '06'), (255, 'Manufacturer', '4c001005441cf39728')]
+BLE: [(1, 'Flags', '1a'), (3, 'Complete 16b Services', '0000fd6f-0000-1000-8000-00805f9b34fb'), (22, '16b Service Data', '6ffd34287308f8148f4c6b75fc4738e4c25733c848ca')]
+BLE: [(1, 'Flags', '02'), (255, 'Manufacturer', '7500010002000102ff00004305'), (25, 'Appearance', 'c000')]
+BLE: [(1, 'Flags', '06'), (255, 'Manufacturer', '4c001005441cf39728')]
+list index out of range
+BLE: [(1, 'Flags', '1a'), (10, 'Tx Power', '08'), (255, 'Manufacturer', '4c0010077f1ffd98fffc48')]
+BLE: [(1, 'Flags', '1a'), (10, 'Tx Power', '0c'), (255, 'Manufacturer', '4c0010050d185843d4')]
+list index out of range
+BLE: [(1, 'Flags', '1a'), (10, 'Tx Power', '08'), (255, 'Manufacturer', '4c001005311cbf5efc')]
+BLE: [(1, 'Flags', '1a'), (10, 'Tx Power', '1a'), (255, 'Manufacturer', '4c0010052b98cb01e1')]
+list index out of range
+BLE: [(1, 'Flags', '06'), (9, 'Complete Local Name', 'MZB24C20R(A)')]
+BLE: Found Mezoo Device
+BLE: Connecting to: f4:30:53:01:1a:cf
+ch Characteristic <6e400003-b5a3-f393-e0a9-e50e24dcca9e>
+RRI: 868
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f4ff03f58f03f74f0400bf140009900018f' 
+Received data b'80f0400bf0400cf04023f04053f140009a00008f' 
+Received data b'80f04100f0407af04040f03f7af140009b00008f' 
+Received data b'80f03f37f03e77f03e54f03e72f140009c00008f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04006f04037f04045f04021f14000ba00008f' 
+Received data b'80f03f7ef03f78f03f67f03f49f14000bb00008f' 
+Received data b'80f03f4df03f5cf03f51f03f52f14000bc00008f' 
+Received data b'80f03f69f03f6bf03f68f03f79f14000bd00008f' 
+Received data b'80f04001f03f78f03f74f03f70f14000be00008f' 
+Received data b'80f03f6bf03f75f03f7ff04003f14000bf00008f' 
+Received data b'80f04010f0401cf04013f04004f140009f00008f' 
+Received data b'80f03f7cf03f79f03f72f03f72f140000000008f' 
+Received data b'80f03f78f03f78f03f6ef03f65f140000000008f' 
+Received data b'80f03f6cf03f7af04002f04007f140000000008f' 
+Received data b'80f04004f03f7ef03f7bf03f6ff140000000008f'
+Received data b'80f03f61f03f57f03f4cf03f4cf140000000008f' 
+Received data b'80f03f64f04001f0401cf0402ff140000000008f' 
+Heart Rate: 56
+No support API yet send to server
+Received data b'80f03f61f03f6af03f7cf0400bf140009300008f' 
+Received data b'80f04017f04018f04011f04013f140009400008f' 
+Received data b'80f0401bf04014f04000f03f6ef140009500008f' 
+Received data b'80f03f67f03f71f04008f04022f140009600008f' 
+RRI: 1068
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04001f04006f04004f03f76f140009900018f' 
+Received data b'80f03f6ff03f78f04006f04005f140009a00008f' 
+Received data b'80f03f6ff03f5bf03f5af03f69f140009b00008f' 
+Received data b'80f03f7df04006f03f78f03f63f140009c00008f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f0ef03e63f03f11f03f49f14000ba00008f' 
+Received data b'80f03f4ef03f38f03f1ef03f0df14000bb00008f' 
+Received data b'80f03e73f03e28f03a58f02c73f14000bc00008f' 
+Received data b'80f0197cf0184bf0295ef03550f14000bd00008f' 
+Received data b'80f0365ff03677f0393ef03f12f14000be00008f' 
+Received data b'80f04638f0497df0491bf04807f14000bf00008f' 
+Received data b'80f04750f04727f0467bf04649f140009f00008f' 
+Received data b'80f04622f0460bf04564f0452af140000000008f' 
+Received data b'80f04501f0446bf0441af04049f140000000008f' 
+Received data b'80f0380bf03079f0313ef0351cf140000000008f' 
+Received data b'80f03821f03d3cf04344f0444cf140000000008f' 
+Received data b'80f03f39f03965f03912f03b24f140000000008f' 
+Received data b'80f03d0df04121f04673f0483ff140000000008f' 
+Heart Rate: 51
+No support API yet send to server
+Received data b'80f04538f04478f04450f0443af140009300008f' 
+Received data b'80f04418f04373f04363f04354f140009400008f' 
+Received data b'80f0432bf04307f04279f04258f140009500008f' 
+Received data b'80f04222f04208f04203f04178f140009600038f' 
+RRI: 1160
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04143f04121f0411df04130f140009900018f' 
+Received data b'80f04131f0411ff0410ef04102f140009a00008f' 
+Received data b'80f04078f04077f0407ef04105f140009b00008f' 
+Received data b'80f04101f04071f04058f04037f140009c03458f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0403af04021f0400ef04004f14000ba00008f' 
+Received data b'80f03f7af03f75f03f66f03f53f14000bb00008f' 
+Received data b'80f03f62f03f7df04005f04004f14000bc00008f' 
+Received data b'80f04002f03f7ff0400af0401af14000bd00008f' 
+Received data b'80f04009f03f66f03f6cf04012f14000be00008f' 
+Received data b'80f04018f0400af04004f03f72f14000bf00008f' 
+Received data b'80f03f65f03f7cf0401af04014f140009f00008f' 
+Received data b'80f03f7af03f74f03f7ef04012f140000000008f' 
+Received data b'80f0402bf0402ff04021f0401cf140000000008f' 
+Received data b'80f04025f04023f04021f0402bf140000000008f' 
+Received data b'80f04024f04011f0401ef0402ef140000000008f' 
+Received data b'80f04015f03f7af03f7cf04001f140000000008f' 
+Received data b'80f03f70f03f66f04004f04026f140000000008f' 
+Heart Rate: 51
+No support API yet send to server
+Received data b'80f03f52f03f3af03f42f03f65f140009300008f' 
+Received data b'80f03f7ef03f7ff03f70f03f65f140009400008f' 
+Received data b'80f03f71f04008f04013f04012f140009500008f' 
+Received data b'80f0400ff04012f0401bf04021f140009600038f' 
+RRI: 1160
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f02f43f02e49f03a2cf0434df140009900028f' 
+Received data b'80f04346f04207f04149f03e5bf140009a00008f' 
+Received data b'80f03a03f0355ff02f43f0284bf140009b00018f' 
+Received data b'80f02857f02f50f03538f03656f140009c06348f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0413ef04230f04236f0417cf14000ba00008f' 
+Received data b'80f0414df04145f0416bf04264f14000bb00008f' 
+Received data b'80f04410f0450df0452cf0447ff14000bc00008f' 
+Received data b'80f04452f04456f04450f04377f14000bd00008f' 
+Received data b'80f0425df04169f04217f04348f14000be00008f' 
+Received data b'80f0447af04628f04730f04734f14000bf00008f' 
+Received data b'80f0467df0465cf04637f0457df140009f00008f' 
+Received data b'80f0453cf04501f04458f0443df140000000008f' 
+Received data b'80f0441ff04375f0434bf04327f140000000008f' 
+Received data b'80f04313f0430ef0427ff0425af140000000008f' 
+Received data b'80f0423af04232f04235f04231f140000000008f' 
+Received data b'80f0421bf04175f04153f0413df140000000008f' 
+Received data b'80f0412cf0412bf04138f0413bf140000000008f' 
+Heart Rate: 45
+No support API yet send to server
+Received data b'80f0405ff04055f04071f0410df140009300008f' 
+Received data b'80f04100f0406cf04065f0404cf140009400008f' 
+Received data b'80f0402af04025f04038f0404bf140009500018f' 
+Received data b'80f04046f04022f0400cf0401ef140009600078f' 
+RRI: 1332
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04014f04018f04029f0402cf140009900028f' 
+Received data b'80f04023f04019f0400bf0400af140009a00008f' 
+Received data b'80f0401bf04020f04017f04010f140009b00018f' 
+Received data b'80f0400bf04005f04010f04021f140009c051d8f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0401cf0400af04004f04002f14000ba00008f' 
+Received data b'80f04008f0401cf04024f0401ef14000bb00008f' 
+Received data b'80f0401cf0401af04017f04021f14000bc00008f' 
+Received data b'80f04028f04012f03f75f03f74f14000bd00008f' 
+Received data b'80f04008f04011f04010f0400bf14000be00008f' 
+Received data b'80f04005f0400df04019f04011f14000bf00008f' 
+Received data b'80f04012f04023f04018f04004f140009f00008f' 
+Received data b'80f04019f04038f04027f04004f140000000008f' 
+Received data b'80f03f7df04001f03f74f03f6af140000000008f' 
+Received data b'80f04005f04028f04020f0400df140000000008f' 
+Received data b'80f04011f0400cf03f72f03f69f140000000008f' 
+Received data b'80f03f76f04003f04008f04006f140000000008f' 
+Received data b'80f04013f04030f04037f04026f140000000008f' 
+Heart Rate: 45
+No support API yet send to server
+Received data b'80f04000f04008f0400df04010f140009300008f' 
+Received data b'80f04014f04016f04016f04009f140009400008f' 
+Received data b'80f03f71f03f68f03f6bf03f6ef140009500018f' 
+Received data b'80f03f71f03f71f03f7cf0400df140009600078f' 
+RRI: 1332
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0400ff04010f04010f0400bf140009900028f' 
+Received data b'80f03f77f03f69f03f78f04009f140009a00008f' 
+Received data b'80f0400cf0400ff0401bf04026f140009b00018f' 
+Received data b'80f0401df0400bf03f7ef03f78f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04007f04012f04004f03f79f14000ba00008f' 
+Received data b'80f03f7af03f7ff04000f03f7bf14000bb00008f' 
+Received data b'80f03f76f04004f04022f04027f14000bc00008f' 
+Received data b'80f04007f03f73f03f7ef04011f14000bd00008f' 
+Received data b'80f0401af0400ef03f78f03f78f14000be00008f' 
+Received data b'80f04002f03f7df03f6ef03f6cf14000bf00008f' 
+Received data b'80f04001f04017f04010f03f76f140009f00008f' 
+Received data b'80f03f66f03f6ef04003f04008f140000000008f' 
+Received data b'80f03f7bf03f77f04003f0400ff140000000008f' 
+Received data b'80f0401af04020f04013f03f7ff140000000008f' 
+Received data b'80f03f7df0400af04012f0400ef140000000008f' 
+Received data b'80f03f7cf03f6df03f71f03f76f140000000008f' 
+Received data b'80f03f75f03f7cf04004f04008f140000000008f' 
+Heart Rate: 45
+No support API yet send to server
+Received data b'80f03f73f03f6ff03f6bf03f79f140009300008f' 
+Received data b'80f04015f04010f03f79f03f7ef140009400008f' 
+Received data b'80f04011f04018f0401df04019f140009500018f' 
+Received data b'80f04003f04001f0400bf03f70f140009600078f' 
+RRI: 1332
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04006f03f78f03f75f03f76f140009900028f' 
+Received data b'80f03f77f04004f04011f04014f140009a00008f' 
+Received data b'80f04016f04008f03f68f03f5cf140009b00018f' 
+Received data b'80f03f6df04004f0400ef03f7af140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f7ff03f72f03f7bf04015f14000ba00008f' 
+Received data b'80f0401bf04006f03f6ef03f69f14000bb00008f' 
+Received data b'80f03f6df03f68f03f5af03f5bf14000bc00008f' 
+Received data b'80f03f76f0400ef0400af04002f14000bd00008f' 
+Received data b'80f04008f03f7ef03f62f03f65f14000be00008f' 
+Received data b'80f04001f04004f03f78f03f78f14000bf00008f' 
+Received data b'80f03f77f03f71f03f71f03f7cf140009f00008f' 
+Received data b'80f0400df04003f03f67f03f69f140000000008f' 
+Received data b'80f03f7df03f7cf03f76f0400df140000000008f' 
+Received data b'80f04024f0400ef03f68f03f6bf140000000008f' 
+Received data b'80f04001f04006f04003f04002f140000000008f' 
+Received data b'80f04004f04011f04018f04005f140000000008f' 
+Received data b'80f03f74f03f7ef0400bf0400ff140000000008f' 
+Heart Rate: 45
+No support API yet send to server
+Received data b'80f03f74f04006f04019f04021f140009300008f' 
+Received data b'80f04004f03f55f03f54f03f79f140009400008f' 
+Received data b'80f04009f04005f04002f03f78f140009500018f' 
+Received data b'80f03f7af04014f04021f04016f140009600078f' 
+RRI: 1332
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0400cf04007f04008f04013f140009900028f' 
+Received data b'80f04018f04014f04012f04018f140009a00008f' 
+Received data b'80f0401bf04016f0400cf03f7ff140009b00018f' 
+Received data b'80f03f6ef03f61f03f68f04004f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f6bf03f60f03f71f03f7ff14000ba00008f' 
+Received data b'80f03f79f03f7cf04011f04012f14000bb00008f' 
+Received data b'80f03f75f03f6af03f7cf04003f14000bc00008f' 
+Received data b'80f03f70f03f68f03f79f0400bf14000bd00008f' 
+Received data b'80f04013f04010f0400cf04011f14000be00008f' 
+Received data b'80f04013f0400bf04008f0400ff14000bf00008f' 
+Received data b'80f04017f04022f0401cf03f7ef140009f00008f' 
+Received data b'80f03f70f03f7ff0400ff0400cf140000000008f' 
+Received data b'80f03f7ef03f77f03f79f04003f140000000008f' 
+Received data b'80f0400bf04007f04000f04002f140000000008f' 
+Received data b'80f04005f03f7df03f79f03f7bf140000000008f' 
+Received data b'80f03f7ef03f7ef03f71f03f64f140000000008f' 
+Received data b'80f03f6bf03f7ef04007f03f7ff140000000008f' 
+Heart Rate: 45
+No support API yet send to server
+Received data b'80f03f63f03f79f03f78f03f69f140009300008f' 
+Received data b'80f03f67f03f75f04009f04011f140009400008f' 
+Received data b'80f04005f03f78f03f7ef04012f140009500018f' 
+Received data b'80f04012f03f77f03f6af03f7bf140009600078f' 
+RRI: 1332
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f73f03f71f03f79f04006f140009900028f' 
+Received data b'80f03f79f03f6cf04000f0400ff140009a00008f' 
+Received data b'80f04003f03f79f03f74f03f75f140009b00018f' 
+Received data b'80f03f77f03f6ff03f6bf03f73f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f74f03f71f03f76f03f76f14000ba00008f' 
+Received data b'80f03f72f03f66f03f5df03f5af14000bb00008f' 
+Received data b'80f03f57f03f65f03f7ef03f7ef14000bc00008f' 
+Received data b'80f03f6ff03f74f03f79f03f79f14000bd00008f' 
+Received data b'80f04006f04009f03f7bf03f7bf14000be00008f' 
+Received data b'80f03f7ef03f69f03f5bf03f67f14000bf00008f' 
+Received data b'80f03f77f03f7ef03f79f03f6ef140009f00008f' 
+Received data b'80f03f68f03f68f03f69f03f67f140000000008f' 
+Received data b'80f03f6af03f71f03f77f03f7cf140000000008f' 
+Received data b'80f03f76f03f70f03f78f03f74f140000000008f' 
+Received data b'80f03f68f03f69f03f75f04002f140000000008f' 
+Received data b'80f0400cf04011f04012f04006f140000000008f' 
+Received data b'80f03f73f03f6bf03f71f03f75f140000000008f' 
+Heart Rate: 27
+No support API yet send to server
+Received data b'80f03f52f03f4cf03f65f04004f140009300008f' 
+Received data b'80f0400bf04006f03f7cf03f6df140009400008f' 
+Received data b'80f03f70f04005f04010f04015f140009500018f' 
+Received data b'80f04010f03f79f03f6df03f71f140009600088f' 
+RRI: 2152
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04006f04001f03f7af04005f140009900028f' 
+Received data b'80f04004f03f72f03f6df03f6ff140009a00008f' 
+Received data b'80f03f6df03f7bf04012f04013f140009b00018f' 
+Received data b'80f03f7ff03f72f03f72f03f76f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0400cf0400bf04007f03f7af14000ba00008f' 
+Received data b'80f03f74f03f7af04002f0400bf14000bb00008f' 
+Received data b'80f04010f04015f0401af04009f14000bc00008f' 
+Received data b'80f03f74f03f7bf0400ef04011f14000bd00008f' 
+Received data b'80f03f7df03f64f03f61f03f6ef14000be00008f' 
+Received data b'80f03f74f03f77f04001f04009f14000bf00008f' 
+Received data b'80f04008f04003f04001f04003f140009f00008f' 
+Received data b'80f04005f03f79f03f65f03f69f140000000008f' 
+Received data b'80f0400ff04028f04014f03f7cf140000000008f' 
+Received data b'80f04005f0400ef03f7ff03f6ff140000000008f' 
+Received data b'80f03f69f03f76f04010f04013f140000000008f' 
+Received data b'80f04002f03f78f03f75f03f73f140000000008f' 
+Received data b'80f03f7ef04003f03f73f03f69f140000000008f' 
+Heart Rate: 36
+No support API yet send to server
+Received data b'80f03f78f04002f0400df04003f140009300008f' 
+Received data b'80f03f7af04006f04007f04002f140009400008f' 
+Received data b'80f04011f04011f03f79f03f70f140009500018f' 
+Received data b'80f03f7bf04001f04005f0400cf140009600078f' 
+RRI: 1632
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04000f04001f04000f03f7cf140009900028f' 
+Received data b'80f04002f04008f03f7ff03f6bf140009a00008f' 
+Received data b'80f03f5ff03f6ff0400bf04004f140009b00018f' 
+Received data b'80f03f66f03f5ef03f6bf03f72f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f72f03f7ef0400cf04015f14000ba00008f'
+Received data b'80f04018f04010f04001f03f73f14000bb00008f' 
+Received data b'80f03f78f04006f04007f04007f14000bc00008f' 
+Received data b'80f04000f03f6df03f6df04001f14000bd00008f' 
+Received data b'80f0400ff0400ff03f7ff03f70f14000be00008f' 
+Received data b'80f03f79f0400ff04014f0400bf14000bf00008f' 
+Received data b'80f03f7ff03f7ff0400cf04016f140009f00008f' 
+Received data b'80f04012f03f7ff03f65f03f5bf140000000008f' 
+Received data b'80f03f70f0400af0400cf03f7ef140000000008f' 
+Received data b'80f03f7ff04009f03f79f03f60f140000000008f' 
+Received data b'80f03f6df04015f0401ef04005f140000000008f' 
+Received data b'80f04000f0400af04001f03f73f140000000008f' 
+Received data b'80f03f71f03f71f03f78f0400af140000000008f' 
+Heart Rate: 103
+No support API yet send to server
+Received data b'80f04015f04013f03f7ff03f7df140009300008f' 
+Received data b'80f04006f0400af0400ff0400cf140009400008f' 
+Received data b'80f03f79f03f69f03f6af03f75f140009500018f' 
+Received data b'80f04008f04007f03f67f03f58f140009600048f' 
+RRI: 488
+---------------------
+<Response [400]>
+---------------------
+///////////////////////////////////////////////////////////////
+Received data b'80 f03f73f04004f04012f04015 f14000 99 0002 8f' 
+Received data b'80 f04012f03f7ff03f6bf03f6b f14000 9a 0000 8f' 
+Received data b'80 f03f75f04004f0401af0401d f14000 9b 0001 8f' 
+Received data b'80 f04008f03f78f03f70f03f6c f14000 9c 0406 8f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80 f03f5cf03f61f03f7df04019 f14000 ba 0000 8f' 
+Received data b'80 f0401af0400ff0400af04005 f14000 bb 0000 8f' 
+Received data b'80 f03f7bf03f75f03f75f03f77 f14000 bc 0000 8f' 
+Received data b'80 f04001f0400cf04009f04002 f14000 bd 0000 8f' 
+Received data b'80 f04008f04014f0401bf04023 f14000 be 0000 8f' 
+Received data b'80 f04023f04010f04002f04003 f14000 bf 0000 8f' 
+Received data b'80 f04003f03f79f03f65f03f58 f14000 9f 0000 8f' 
+Received data b'80 f03f60f03f73f04007f04016 f14000 00 0000 8f' 
+Received data b'80 f04013f04003f03f76f03f6a f14000 00 0000 8f' 
+Received data b'80 f03f60f03f6bf0400bf0401d f14000 00 0000 8f' 
+Received data b'80 f04010f03f76f03f5ff03f63 f14000 00 0000 8f' 
+Received data b'80 f03f7df03f7bf03f6df03f78 f14000 00 0000 8f' 
+Received data b'80 f04001f04005f0400df04007 f14000 00 0000 8f' 
+Heart Rate: 166
+///////////////////////////////////////////////////////////////
+No support API yet send to server
+Received data b'80f03f69f03f68f03f6bf03f68f140009300008f' 
+Received data b'80f03f62f03f6cf04001f04010f140009400008f' 
+Received data b'80f0401bf0401cf0400ff04006f140009500018f' 
+Received data b'80f04005f04005f04004f03f7cf140009600008f' 
+RRI: 360
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f63f03f72f03f78f03f6ff140009900028f' 
+Received data b'80f03f69f03f6bf03f70f03f66f140009a00008f' 
+Received data b'80f03f4ef03f49f03f0df03d04f140009b00018f' 
+Received data b'80f03a54f03a70f03c6bf03d5bf140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04060f04049f04034f0401af14000ba00008f' 
+Received data b'80f03f41f03e2ff03e02f03e74f14000bb00008f' 
+Received data b'80f03f6af04025f04052f0404df14000bc00008f' 
+Received data b'80f03f6ef03e5ef03e03f03e1cf14000bd00008f' 
+Received data b'80f03e72f03f32f03f39f03f17f14000be00008f' 
+Received data b'80f03f0ff03f59f04042f0406bf14000bf00008f' 
+Received data b'80f04049f03f74f03f07f03e42f140009f00008f' 
+Received data b'80f03e4cf03e76f03e79f03e63f140000000008f' 
+Received data b'80f03e70f03e7ff03e5ff03e43f140000000008f' 
+Received data b'80f03e5ff03f13f03f41f03f74f140000000008f' 
+Received data b'80f04026f04042f04045f04011f140000000008f' 
+Received data b'80f03e5bf03c68f03c18f03c60f140000000008f' 
+Received data b'80f03d23f03d6cf03e41f03e70f140000000008f' 
+Heart Rate: 154
+No support API yet send to server
+Received data b'80f04023f04048f04064f04114f140009300008f' 
+Received data b'80f04148f0414ef0413af0415bf140009400008f' 
+Received data b'80f0420df04174f04125f04069f140009500018f' 
+Received data b'80f04043f04023f0401af04010f140009600078f' 
+RRI: 448
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0414cf0413ef04132f0413ef140009900028f' 
+Received data b'80f04131f04103f04078f04112f140009a00008f' 
+Received data b'80f04120f0411df0411bf0410cf140009b00018f' 
+Received data b'80f04067f0404ff04056f04062f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04021f04032f04052f04055f14000ba00008f' 
+Received data b'80f04032f04015f04020f0403af14000bb00008f' 
+Received data b'80f04031f0401cf0401cf04019f14000bc00008f' 
+Received data b'80f04012f04015f04022f04038f14000bd00008f' 
+Received data b'80f04046f0404cf0404af04030f14000be00008f' 
+Received data b'80f04007f03f67f03f61f03f6af14000bf00008f' 
+Received data b'80f03f73f04004f0400bf03f79f140009f00008f' 
+Received data b'80f03f71f03f7bf04000f03f7ff140000000008f' 
+Received data b'80f03f7df03f7af03f6cf03f5cf140000000008f' 
+Received data b'80f03f51f03f40f03f32f03f37f140000000008f' 
+Received data b'80f03f4af03f60f03f67f03f64f140000000008f' 
+Received data b'80f03f63f03f54f03f3bf03f38f140000000008f' 
+Received data b'80f03f41f03f41f03f54f03f70f140000000008f' 
+Heart Rate: 133
+No support API yet send to server
+Received data b'80f03f28f03e7ef03e3ef03e43f140009300008f' 
+Received data b'80f03e7af03f12f03f1bf03f30f140009400008f' 
+Received data b'80f03f38f03f3df03f4df03f59f140009500018f' 
+Received data b'80f03f56f03f52f03f5df03f69f140009600078f' 
+RRI: 448
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f4cf03f5bf03f5bf03f5af140009900028f' 
+Received data b'80f03f66f03f7ef0400ff04013f140009a00008f' 
+Received data b'80f04015f04017f04017f0400ff140009b00018f' 
+Received data b'80f04005f03f7ff03f7bf04002f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04021f04027f0402bf04023f14000ba00008f' 
+Received data b'80f0400ff04003f04004f04000f14000bb00008f' 
+Received data b'80f03f7df04008f04014f04016f14000bc00008f' 
+Received data b'80f0400cf04005f04012f04020f14000bd00008f' 
+Received data b'80f0401df0400bf03f76f03f69f14000be00008f' 
+Received data b'80f03f68f03f75f0400ef0401bf14000bf00008f' 
+Received data b'80f04010f04011f04031f04042f140009f00008f' 
+Received data b'80f0403bf04035f0402af0401bf140000000008f' 
+Received data b'80f04016f04012f04011f04020f140000000008f' 
+Received data b'80f0403bf04051f04057f04043f140000000008f' 
+Received data b'80f0401ff04006f03f76f03f66f140000000008f' 
+Received data b'80f03f5cf03f50f03f44f03f4af140000000008f' 
+Received data b'80f03f60f03f76f04002f04002f140000000008f' 
+Heart Rate: 133
+No support API yet send to server
+Received data b'80f0402cf04023f0400cf04001f140009300008f' 
+Received data b'80f0400af04012f0400af03f79f140009400008f' 
+Received data b'80f03f6ff03f77f04003f04000f140009500018f' 
+Received data b'80f03f71f03f65f03f64f03f6ef140009600078f' 
+RRI: 448
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0401cf04004f03f72f03f79f140009900028f' 
+Received data b'80f04015f0401cf04004f03f6df140009a00008f' 
+Received data b'80f03f5ef03f55f03f58f03f59f140009b00018f' 
+Received data b'80f03f4df03f2cf03e7bf03e49f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03e5af03e74f03f0df03f3df14000ba00008f' 
+Received data b'80f03f67f03f51f03f00f03e21f14000bb00008f' 
+Received data b'80f03d57f03d44f03d62f03e05f14000bc00008f' 
+Received data b'80f03e16f03e1df03e43f03e43f14000bd00008f' 
+Received data b'80f03c74f0380bf02f60f02753f14000be00008f' 
+Received data b'80f0245df0261af02778f0297af14000bf00008f' 
+Received data b'80f02d31f03060f03327f03541f140009f00008f' 
+Received data b'80f03679f03631f03420f03303f140000000008f' 
+Received data b'80f03336f0334ef03371f03655f140000000008f' 
+Received data b'80f03b07f03e1cf04011f04235f140000000008f' 
+Received data b'80f0456ef04a00f04d3af04f56f140000000008f' 
+Received data b'80f05142f05244f05166f0504ef140000000008f' 
+Received data b'80f04f67f04e59f04d32f04c3ef140000000008f' 
+Heart Rate: 59
+No support API yet send to server
+Received data b'80f04932f04865f04837f04801f140009300008f' 
+Received data b'80f04744f0471bf04666f04613f140009400008f' 
+Received data b'80f04558f0453df04517f04461f140009500018f' 
+Received data b'80f0442ef04406f0436af0435cf140009600008f' 
+RRI: 1008
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04268f0424bf04239f04224f140009900028f' 
+Received data b'80f04207f0417ef04206f04201f140009a00008f' 
+Received data b'80f04168f0415ff0415ff04149f140009b00018f' 
+Received data b'80f04139f04137f04123f04112f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0403cf04042f04045f04044f14000ba00008f' 
+Received data b'80f04038f04032f0403af0402ef14000bb00008f' 
+Received data b'80f04012f0400df0401af04022f14000bc00008f' 
+Received data b'80f0402af0402df04022f0401af14000bd00008f' 
+Received data b'80f04018f04010f04004f04003f14000be00008f' 
+Received data b'80f04007f0400ff04015f04000f14000bf00008f' 
+Received data b'80f03f62f03f68f03f72f03f6cf140009f00008f' 
+Received data b'80f03f73f03f7cf03f7af03f7ff140000000008f' 
+Received data b'80f04010f04021f04025f0401cf140000000008f' 
+Received data b'80f04019f04015f04001f03f6bf140000000008f' 
+Received data b'80f03f6ff04003f03f78f03f61f140000000008f' 
+Received data b'80f03f71f0400cf04006f03f79f140000000008f' 
+Received data b'80f04001f0400ef0400df04007f140000000008f' 
+Heart Rate: 59
+No support API yet send to server
+Received data b'80f03f6cf03f70f03f76f04004f140009300008f' 
+Received data b'80f0400ef04016f0401af0400cf140009400008f' 
+Received data b'80f03f7df04002f04008f04012f140009500018f' 
+Received data b'80f0402bf0402ef04010f04005f140009600008f' 
+RRI: 1008
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f73f03f72f04000f04000f140009900028f' 
+Received data b'80f03f74f03f72f03f7cf04007f140009a00008f' 
+Received data b'80f0400ff0400cf03f7df03f7cf140009b00018f' 
+Received data b'80f0400bf04011f0400bf03f7df140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04008f04011f0400ff0400df14000ba00008f' 
+Received data b'80f04012f04019f0400df03f78f14000bb00008f' 
+Received data b'80f03f72f03f76f03f7af03f71f14000bc00008f' 
+Received data b'80f03f60f03f61f03f72f04007f14000bd00008f' 
+Received data b'80f04020f04033f0403df04046f14000be00008f' 
+Received data b'80f04049f0404af0405bf0406bf14000bf00008f' 
+Received data b'80f0405ef0404af0404cf04052f140009f00008f' 
+Received data b'80f04053f04061f04071f04065f140000000008f' 
+Received data b'80f0403cf0401ff04028f04032f140000000008f' 
+Received data b'80f0401ff0401af0402ef04033f140000000008f' 
+Received data b'80f04026f04020f04027f04033f140000000008f' 
+Received data b'80f0402ef0401af04016f04025f140000000008f' 
+Received data b'80f04026f0401bf04018f04018f140000000008f' 
+Heart Rate: 59
+No support API yet send to server
+Received data b'80f03f76f04005f0401ff0402ef140009300008f' 
+Received data b'80f0402af0401ff04013f0400cf140009400008f' 
+Received data b'80f0401bf04037f0403bf04027f140009500018f' 
+Received data b'80f03f7cf03f0ef03e1cf03e20f140009600008f' 
+RRI: 1008
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f20f03e51f03e42f03e78f140009900028f' 
+Received data b'80f03f27f03f3cf03f44f03f37f140009a00008f' 
+Received data b'80f03f2af03f41f03f63f03f6df140009b00018f' 
+Received data b'80f03f61f03f55f03f52f03f4ef140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f03f6ff03f57f03f55f03f62f14000ba00008f' 
+Received data b'80f03f6cf03f7af04003f04003f14000bb00008f' 
+Received data b'80f04002f03f77f03f6cf03f68f14000bc00008f' 
+Received data b'80f03f5df03f56f03f63f03f73f14000bd00008f' 
+Received data b'80f03f74f03f6af03f6af04000f14000be00008f' 
+Received data b'80f04006f03f62f03f4df03f6df14000bf00008f' 
+Received data b'80f04012f0400cf03f7cf03f77f140009f00008f' 
+Received data b'80f03f64f03f56f03f61f03f6df140000000008f' 
+Received data b'80f03f65f03f57f03f5af03f6af140000000008f' 
+Received data b'80f03f75f03f74f03f72f03f76f140000000008f' 
+Received data b'80f03f78f03f73f03f73f04008f140000000008f' 
+Received data b'80f0401cf0401ff0401bf04010f140000000008f' 
+Received data b'80f04003f03f7bf03f6cf03f5df140000000008f' 
+Heart Rate: 41
+No support API yet send to server
+Received data b'80f03f7bf03f78f03f70f03f68f140009300008f' 
+Received data b'80f03f72f04001f04007f04005f140009400008f' 
+Received data b'80f03f7ff03f7ff04001f04004f140009500018f' 
+Received data b'80f04012f04021f0401af0400af140009600088f' 
+RRI: 1444
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f04015f04019f04019f04014f140009900028f' 
+Received data b'80f0400bf04006f04008f04006f140009a00008f' 
+Received data b'80f04003f04004f04008f04014f140009b00018f' 
+Received data b'80f04015f0400cf0400cf04003f140009c04068f' 
+Battery check: 0
+No support API yet send to server
+Temperature: 0
+---------------------
+<Response [400]>
+---------------------
+Received data b'80f0400ff04003f04012f04021f14000ba00008f' 
+Received data b'80f04015f0400df0400ff04001f14000bb00008f' 
+Received data b'80f03f7af04006f04008f04004f14000bc00008f' 
+Received data b'80f0400ef04016f0400df04001f14000bd00008f' 
+Received data b'80f04004f0400ff0400ef04006f14000be00008f' 

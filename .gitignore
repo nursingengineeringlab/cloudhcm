@@ -1,0 +1,112 @@
+# Prerequisites
+*.d
+*.pem
+*.key
+*.pyc
+.idea
+.DS_Store
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+#*.lai
+#*.la
+#*.a
+#*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+*.elf
+*.hex
+*.map
+
+# node modeule
+**/node_modules
+*.pyc
+data_store1.txt
+
+# NRF52 SDK exlusions
+nRF5_SDK_17.0.0/*
+!nRF5_SDK_17.0.0/components/
+!nRF5_SDK_17.0.0/config/
+!nRF5_SDK_17.0.0/external/
+!nRF5_SDK_17.0.0/integration/
+!nRF5_SDK_17.0.0/modules/
+!nRF5_SDK_17.0.0/examples/
+
+# Exclude unnecessary examples
+nRF5_SDK_17.0.0/examples/*
+!nRF5_SDK_17.0.0/examples/ble_central/
+!nRF5_SDK_17.0.0/examples/ble_peripheral/
+!nRF5_SDK_17.0.0/examples/dfu/
+
+###
+# Exclude DFU
+###
+nRF5_SDK_17.0.0/examples/dfu/*
+!nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/
+nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/*
+!nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/pca10040_s132_ble/
+!nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/main.c
+!nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/secure_bootloader.eww
+!nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/nrf_crypto_allocator.h
+
+nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/pca10040_s132_ble/iar/*
+nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/pca10040_s132_ble/armgcc/*
+nRF5_SDK_17.0.0/examples/dfu/secure_bootloader/pca10040_s132_ble/arm5_no_packs/*
+
+###
+# Exclude Central
+###
+nRF5_SDK_17.0.0/examples/ble_central/*
+!nRF5_SDK_17.0.0/examples/ble_central/ble_base_receiver/
+
+# Exclude other NRF52 SOC Models
+nRF5_SDK_17.0.0/examples/ble_central/ble_base_receiver/pca10056/*
+
+# Exclude other development environments
+nRF5_SDK_17.0.0/examples/ble_central/ble_base_receiver/pca10040/s132/armgcc/*
+nRF5_SDK_17.0.0/examples/ble_central/ble_base_receiver/pca10040/s132/iar/*
+nRF5_SDK_17.0.0/examples/ble_central/ble_base_receiver/pca10040/s132/arm5_no_packs/*
+
+# exclude builds
+nRF5_SDK_17.0.0/examples/ble_central/ble_base_receiver/pca10040/s132/ses/Output/*
+
+###
+# Exclude Peripheral
+###
+nRF5_SDK_17.0.0/examples/ble_peripheral/*
+!nRF5_SDK_17.0.0/examples/ble_peripheral/senior_bracelet/
+
+# Exclude other NRF52 SOC Models
+nRF5_SDK_17.0.0/examples/ble_peripheral/senior_bracelet/pca10056/*
+nRF5_SDK_17.0.0/examples/ble_peripheral/senior_bracelet/pca10040e/*
+nRF5_SDK_17.0.0/examples/ble_peripheral/senior_bracelet/pca10056e/*
+
+# Exclude other development environments
+nRF5_SDK_17.0.0/examples/ble_peripheral/senior_bracelet/pca10040/s132/armgcc/*
+nRF5_SDK_17.0.0/examples/ble_peripheral/senior_bracelet/pca10040/s132/iar/*
+nRF5_SDK_17.0.0/examples/ble_peripheral/senior_bracelet/pca10040/s132/arm5_no_packs/*
+
+# exclude builds
+nRF5_SDK_17.0.0/examples/ble_peripheral/senior_bracelet/pca10040/s132/ses/Output/*
