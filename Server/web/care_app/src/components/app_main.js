@@ -1,5 +1,4 @@
 import React from 'react';
-// import env from "react-dotenv";
 import { Layout, Menu} from 'antd';
 import "antd/dist/antd.css";
 import {
@@ -8,39 +7,16 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import UserList from './user_list.js'
-// import io from 'socket.io-client'
 import {exceeded_threshold} from './device_type.js'
 const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
 var randomColor = require('randomcolor'); // import the script
-
-// var https_public_url = "https://shiywang.asuscomm.com"
 var https_public_url = "http://127.0.0.1"
-// var http_public_url = "http://shiywang.asuscomm.com"
-// var wss_url = "wss://shiywang.asuscomm.com"
-// var api_service_host   = 'http://' + env.API_SERVICE_HOST;
-// var node_service_host = 'http://' + env.NODESERVER_SERVICE_HOST;
-// var socketio_server = node_service_host + ':4000/';
-// var api_base_url = api_service_host + ":8000/";
-var socketio_server = https_public_url + ':30006/';
-var topic_name = "userdata";
 var api_base_url = https_public_url + ":8000/";
-
 const wsclient = new WebSocket('ws://127.0.0.1:8000/ws/sensordata/RR');
-// const wsclient = new WebSocket('ws://127.0.0.1:8003');
 
 let headers = new Headers();
 headers.append('Accept', 'application/json');
 
-// const temp_user = {
-//   "name": "Jeffery Homes",
-//   "age": 78,
-//   "gender": "male",
-//   "device_id": "AG82DD4",
-//   "device_type": "ECG",
-//   "battery": 50,
-//   "data": [{"value": 35, "time": 0}],
-// }
 
 const max_array_len = 10;
 
@@ -100,6 +76,7 @@ class MainApp extends React.Component {
     if(this.OnlineSeniors.has(jmsg.device_id)) {
       let new_data = {"value": jmsg.value, "time": jmsg.time};
       this.OnlineSeniors.get(jmsg.device_id).data.push(new_data)
+
       this.OnlineSeniors.get(jmsg.device_id).watch = exceeded_threshold(
           new_data.value, 
           this.OnlineSeniors.get(jmsg.device_id).device_type

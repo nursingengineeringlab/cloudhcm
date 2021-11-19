@@ -9,3 +9,4 @@ django-cors-headers
 django-environ
 django-sslserver
 channels
+django-redis
