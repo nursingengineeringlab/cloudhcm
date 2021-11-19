@@ -16,7 +16,9 @@ from random import randint
 # seed random number generator
 # generate some integers
 
-websocket_url = "ws://127.0.0.1:8000/"
+# websocket_url = "ws://127.0.0.1:8000/"
+websocket_url = "ws://shiywang.asuscomm.com:30007/"
+
 senior_queue = queue.Queue()
 
 PING_TIMEOUT = 60
@@ -67,25 +69,26 @@ class TestECG(Logger):
     #         while True:
 
     async def run(self):
-        device_id = senior_queue.get().id
-        url = websocket_url + 'ws/sensor/RR'
-        async with websockets.connect(url) as websocket:
-            seq = 1
-            while True:
-                if int(time.time()) - self.last_data_update_time > UPDATE_DATA_TIMEOUT:
-                    new_rand_value = randint(60, 120)
-                    # senior.device.value = new_rand_value
-                    # data = senior.get_data()
-                    test_json = {
-                        "device_id": device_id,
-                        "sequence_id": seq,
-                        "time": int(time.time()),
-                        "value": new_rand_value,
-                        "battery": 60,
-                    }
-                    await websocket.send(json.dumps(test_json))
-                    self.last_data_update_time = int(time.time())
-                    seq = seq + 1
+        for senior in senior_queue.queue:
+            device_id = senior.id
+            url = websocket_url + 'ws/sensor/RR'
+            async with websockets.connect(url) as websocket:
+                seq = 1
+                while True:
+                    if int(time.time()) - self.last_data_update_time > UPDATE_DATA_TIMEOUT:
+                        new_rand_value = randint(60, 120)
+                        # senior.device.value = new_rand_value
+                        # data = senior.get_data()
+                        test_json = {
+                            "device_id": device_id,
+                            "sequence_id": seq,
+                            "time": int(time.time()),
+                            "value": new_rand_value,
+                            "battery": 60,
+                        }
+                        await websocket.send(json.dumps(test_json))
+                        self.last_data_update_time = int(time.time())
+                        seq = seq + 1
 
 
 if __name__ == '__main__':

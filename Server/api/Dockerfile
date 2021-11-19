@@ -17,9 +17,9 @@ RUN /usr/bin/python3 -m pip install --upgrade pip
 COPY . /code/
 RUN /usr/bin/python3 -m pip install -r requirements.txt
 
-# RUN chmod +x /code/entrypoint.sh
-# ENTRYPOINT ["/code/entrypoint.sh"]
-# CMD ["/code/entrypoint.sh"]
+RUN chmod +x /code/entrypoint.sh
+ENTRYPOINT ["/code/entrypoint.sh"]
+CMD ["/code/entrypoint.sh"]
 
 
 

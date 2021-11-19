@@ -53,16 +53,17 @@ class SensorDataConsumer(AsyncWebsocketConsumer):
 
         # await cache.set(device_id, "value", timeout=None)
         # await cache.set_async("key", "value", timeout=None)
-        if cache.ttl(device_id) == 0:
+        ret = await cache.ttl(device_id)
+        if ret == 0:
             senior = Senior.objects.get(device_id=device_id)
             data["name"] = senior.name
             data["room_no"] = senior.room_no
             data["device_type"] = senior.device_type
             data["gender"] = senior.gender
             data["data"] = [{"value": 0, "time": 0}]  # Create list to store sensor data
-            cache.set(device_id, data, timeout=10)
+            await cache.set(device_id, data, timeout=10)
         else:
-            cache.set(device_id, data, timeout=10)
+            await cache.set(device_id, data, timeout=10)
 
         # if device_id in onlineSeniorsDict:
         #     with onlineSeniorsDict as online_seniors:

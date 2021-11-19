@@ -113,28 +113,28 @@ REST_FRAMEWORK = {
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'SensorData',
-#         'USER': 'CHSUser1',
-#         'HOST': get_env_value('POSTGRES_DB_SVC_SERVICE_HOST'),
-#         'PASSWORD': 'A9EQFT6gS#LRHHwo75MRPZQl8mWaA02N&',
-#         'PORT': int(get_env_value('POSTGRES_DB_SVC_SERVICE_PORT')),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'SensorData',
+        'USER': 'CHSUser1',
+        'HOST': get_env_value('POSTGRES_DB_SVC_SERVICE_HOST'),
+        'PASSWORD': 'A9EQFT6gS#LRHHwo75MRPZQl8mWaA02N&',
+        'PORT': int(get_env_value('POSTGRES_DB_SVC_SERVICE_PORT')),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'SensorData',
+#     }
+# }
 
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
+        "LOCATION": "redis://10.152.183.214:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
