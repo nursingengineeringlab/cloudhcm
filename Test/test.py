@@ -5,17 +5,14 @@ import time
 from logger import Logger
 from apihandler import api_handler
 from senior import senior_manager
-import sys
-import random
 import math
 import asyncio
 import websockets
 import argparse
 import os
 import multiprocessing
-import threading
-from random import seed
 from random import randint
+
 # seed random number generator
 # generate some integers
 
@@ -53,41 +50,42 @@ class TestECG(Logger):
         for senior in seniors:
             senior_queue.put(senior)
 
-    def ws_conn(self):
-        for senior in senior_queue.queue:
-            device_id = senior.id
-            url = websocket_url + 'ws/sensordata/RR/' + device_id 
-            with websockets.connect(url) as websocket:
+    # def ws_conn(self):
+    #     for senior in senior_queue.queue:
+    #         device_id = senior.id
+    #         url = websocket_url + 'ws/sensordata/RR/' + device_id
+    #         with websockets.connect(url) as websocket:
+    #             if int(time.time()) - self.last_data_update_time > UPDATE_DATA_TIMEOUT:
+    #                 new_rand_value = randint(60, 120)
+    #                 senior.device.value = new_rand_value
+    #                 data = senior.get_data()
+    #                 websocket.send(json.dumps(data))
+    #                 self.last_data_update_time = int(time.time())
+
+    # async def send_msg(self, uri, senior):
+    #     async with websockets.connect(uri) as ws:
+    #         while True:
+
+    async def run(self):
+        device_id = senior_queue.get().id
+        url = websocket_url + 'ws/sensor/RR'
+        async with websockets.connect(url) as websocket:
+            seq = 1
+            while True:
                 if int(time.time()) - self.last_data_update_time > UPDATE_DATA_TIMEOUT:
                     new_rand_value = randint(60, 120)
-                    senior.device.value = new_rand_value
-                    data = senior.get_data()
-                    websocket.send(json.dumps(data))
+                    # senior.device.value = new_rand_value
+                    # data = senior.get_data()
+                    test_json = {
+                        "device_id": device_id,
+                        "sequence_id": seq,
+                        "time": int(time.time()),
+                        "value": new_rand_value,
+                        "battery": 60,
+                    }
+                    await websocket.send(json.dumps(test_json))
                     self.last_data_update_time = int(time.time())
-
-
-    def run(self, num_max):
-        x_ls =list(range(num_max))
-        thread_list = []
-        results = []
-        for x in x_ls:
-            thread = threading.Thread(target=self.ws_conn, args=(x, results))
-            thread_list.append(thread)
-        for thread in thread_list:
-            thread.start()
-        for thread in thread_list:
-            thread.join()
-
-        # for senior in senior_queue.queue:
-        #     device_id = senior.id
-        #     url = websocket_url + 'ws/sensordata/RR/' + device_id 
-        #     async with websockets.connect(url) as websocket:
-        #         if int(time.time()) - self.last_data_update_time > UPDATE_DATA_TIMEOUT:
-        #             new_rand_value = randint(60, 120)
-        #             senior.device.value = new_rand_value
-        #             data = senior.get_data()
-        #             await websocket.send(json.dumps(data))
-        #             self.last_data_update_time = int(time.time())
+                    seq = seq + 1
 
 
 if __name__ == '__main__':
@@ -96,7 +94,6 @@ if __name__ == '__main__':
     parser.add_argument('-d', '--dele', default=True)
 
     print("Number of cpu :", multiprocessing.cpu_count())
-    
     args = parser.parse_args()
     input_num = args.num
     if args.dele is True:
@@ -107,9 +104,7 @@ if __name__ == '__main__':
 
         with open("./data_store/test.txt", 'a') as results_file:
             pass
-        
 
     atexit.register(exit_handler)
     test_run = TestECG(input_num)
-    api_handler.start()
     asyncio.run(test_run.run())

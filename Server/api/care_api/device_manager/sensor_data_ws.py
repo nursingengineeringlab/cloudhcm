@@ -1,67 +1,84 @@
-from channels.generic.websocket import WebsocketConsumer
+from channels.generic.websocket import AsyncWebsocketConsumer
 # from device_manager.data_medium import dataMedium
 from device_manager.manager import onlineSeniorsDict
 from data_api.models import Senior
 # from asgiref.sync import async_to_sync
 import json
+from django.core.cache import cache
+
 
 DEVICE_TIMEOUT = 60 * 5
 MAX_DATA_ARRAY_LEN = 10
 
 
-class SensorDataConsumer(WebsocketConsumer):
+class SensorDataConsumer(AsyncWebsocketConsumer):
     
     async def connect(self):
-        self.device_id = self.scope['url_route']['kwargs']['device_id']
-        self.device_group_name = self.device_id
+        # self.device_id = self.scope['url_route']['kwargs']['device_id']
 
+        self.device_id = 'test'
+        self.device_group_name = self.device_id
+        print("test$$$$$$$$$$$$$$$$$$$$$$")
         await self.channel_layer.group_add(
             self.device_group_name,
             self.channel_name
         )
 
-        print(self.device_group_name)
-        self.accept()
+        await self.accept()
         print("#######CONNECTED############")
+        print(self.device_group_name)
+
 
 
     async def disconnect(self, code):
-        global onlineSeniorsDict
+        # global onlineSeniorsDict
 
         await self.channel_layer.group_discard(
             self.device_group_name,
             self.channel_name
         )
 
-        with onlineSeniorsDict as online_seniors:
-            del online_seniors[self.device_id]
+        # with onlineSeniorsDict as online_seniors:
+        #     del online_seniors[self.device_id]
 
         print("DISCONNECED CODE: ",code)
-        print("Device IDL ", self.device_id)
+        # print("Device IDL ", self.device_id)
 
     async def receive(self, text_data=None):
-        global onlineSeniorsDict
+        # global onlineSeniorsDict
 
-        print(" MESSAGE RECEIVED")
-        print(text_data)
+        print("MESSAGE RECEIVED")
         data = json.loads(text_data)
         device_id = data['device_id']
 
-        if device_id in onlineSeniorsDict:
-            with onlineSeniorsDict as online_seniors:
-                online_seniors[device_id]["time"] = data["time"]  # Assign new unix time
-                online_seniors[device_id]["battery"] = data["battery"]
-        else:  # New Device
-            device_id = data.get("device_id")
+        # await cache.set(device_id, "value", timeout=None)
+        # await cache.set_async("key", "value", timeout=None)
+        if cache.ttl(device_id) == 0:
             senior = Senior.objects.get(device_id=device_id)
             data["name"] = senior.name
             data["room_no"] = senior.room_no
             data["device_type"] = senior.device_type
             data["gender"] = senior.gender
             data["data"] = [{"value": 0, "time": 0}]  # Create list to store sensor data
+            cache.set(device_id, data, timeout=10)
+        else:
+            cache.set(device_id, data, timeout=10)
 
-            with onlineSeniorsDict as online_seniors:
-                online_seniors[device_id] = data
+        # if device_id in onlineSeniorsDict:
+        #     with onlineSeniorsDict as online_seniors:
+        #         online_seniors[device_id]["time"] = data["time"]  # Assign new unix time
+        #         online_seniors[device_id]["battery"] = data["battery"]
+        # else:  # New Device
+        #     device_id = data.get("device_id")
+        #     senior = Senior.objects.get(device_id=device_id)
+        #     data["name"] = senior.name
+        #     data["room_no"] = senior.room_no
+        #     data["device_type"] = senior.device_type
+        #     data["gender"] = senior.gender
+        #     data["data"] = [{"value": 0, "time": 0}]  # Create list to store sensor data
+
+        #     with onlineSeniorsDict as online_seniors:
+        #         online_seniors[device_id] = data
 
         await self.channel_layer.group_send(
             self.device_group_name,{
