@@ -12,7 +12,7 @@ const { Header, Content, Footer, Sider } = Layout;
 var randomColor = require('randomcolor'); // import the script
 var https_public_url = "http://127.0.0.1"
 var api_base_url = https_public_url + ":8000/";
-const wsclient = new WebSocket('ws://127.0.0.1:8000/ws/sensordata/RR');
+const wsclient = new WebSocket('ws://127.0.0.1:8000/ws/sensor/RR');
 
 let headers = new Headers();
 headers.append('Accept', 'application/json');

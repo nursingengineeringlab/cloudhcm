@@ -131,15 +131,27 @@ DATABASES = {
     }
 }
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": ".cache.RedisCache",
+#         "LOCATION": "",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         }
+#     }
+# }
+
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_async_redis.cache.RedisCache",
+#         "LOCATION": "redis://10.152.183.214:6379/1",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_async_redis.client.DefaultClient",
+#         }
+#     }
+# }
+
+# DJANGO_ASYNC_REDIS_IGNORE_EXCEPTIONS = True
 
 
 # CACHES = {

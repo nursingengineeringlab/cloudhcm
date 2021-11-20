@@ -1,5 +1,4 @@
----
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: redis
@@ -17,7 +16,6 @@ spec:
       containers:
         - name: redis
           image: redislabs/redis
-          args: ["--requirepass", "admin", "--appendonly", "yes", "--save", "900", "1", "--save", "30", "2"]
           ports:
             - containerPort: 6379
               name: redis
