@@ -16,8 +16,8 @@ from random import randint
 # seed random number generator
 # generate some integers
 
-# websocket_url = "ws://127.0.0.1:8000/"
-websocket_url = "ws://shiywang.asuscomm.com:30007/"
+websocket_url = "ws://127.0.0.1:8000/"
+# websocket_url = "ws://shiywang.asuscomm.com:30007/"
 
 senior_queue = queue.Queue()
 
@@ -69,12 +69,13 @@ class TestECG(Logger):
     #         while True:
 
     async def run(self):
-        for senior in senior_queue.queue:
-            device_id = senior.id
-            url = websocket_url + 'ws/sensor/RR'
-            async with websockets.connect(url) as websocket:
-                seq = 1
-                while True:
+        url = websocket_url + 'ws/sensor/RR'
+        async with websockets.connect(url) as websocket:
+            while True:
+                for senior in senior_queue.queue:
+                    device_id = senior.id
+                    print(device_id)
+                    seq = 1
                     if int(time.time()) - self.last_data_update_time > UPDATE_DATA_TIMEOUT:
                         new_rand_value = randint(60, 120)
                         # senior.device.value = new_rand_value

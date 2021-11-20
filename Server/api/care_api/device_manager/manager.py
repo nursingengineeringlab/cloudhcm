@@ -10,7 +10,7 @@ MAX_DATA_ARRAY_LEN = 10
 
 
 onlineSeniorsDict = Online_Seniors()
-
+# onlineSeniorsDict = {}
 
 class Online_Seniors_Manager(threading.Thread):
     def __init__(self):
