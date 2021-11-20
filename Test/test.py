@@ -24,6 +24,9 @@ senior_queue = queue.Queue()
 PING_TIMEOUT = 60
 UPDATE_DATA_TIMEOUT = 1
 
+def current_milli_time():
+    return round(time.time() * 1000)
+
 
 # On program exit delete users from database
 def exit_handler():
@@ -73,23 +76,21 @@ class TestECG(Logger):
         async with websockets.connect(url) as websocket:
             while True:
                 for senior in senior_queue.queue:
-                    device_id = senior.id
-                    print(device_id)
-                    seq = 1
                     if int(time.time()) - self.last_data_update_time > UPDATE_DATA_TIMEOUT:
                         new_rand_value = randint(60, 120)
                         # senior.device.value = new_rand_value
                         # data = senior.get_data()
                         test_json = {
-                            "device_id": device_id,
-                            "sequence_id": seq,
-                            "time": int(time.time()),
+                            "device_id": senior.id,
+                            "sequence_id": senior.seq,
+                            "time": int(round(time.time() * 1000)),
                             "value": new_rand_value,
                             "battery": 60,
                         }
+                        print(json.dumps(test_json))
                         await websocket.send(json.dumps(test_json))
                         self.last_data_update_time = int(time.time())
-                        seq = seq + 1
+                        senior.seq = senior.seq + 1
 
 
 if __name__ == '__main__':

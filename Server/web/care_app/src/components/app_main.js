@@ -72,13 +72,13 @@ class MainApp extends React.Component {
   call_back = e =>  {
     const object = JSON.parse(e.data);
     var jmsg = JSON.parse(object.message);
-    console.log(jmsg);
     if(this.OnlineSeniors.has(jmsg.device_id)) {
       let new_data = {"value": jmsg.value, "time": jmsg.time};
+      const time_now = Date.now();
+      console.log(jmsg, time_now - jmsg.time);
       this.OnlineSeniors.get(jmsg.device_id).data.push(new_data)
-
       this.OnlineSeniors.get(jmsg.device_id).watch = exceeded_threshold(
-          new_data.value, 
+          new_data.value,
           this.OnlineSeniors.get(jmsg.device_id).device_type
       );
       // Maintain array size

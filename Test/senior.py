@@ -17,6 +17,7 @@ class Senior:
 
         self.device = device
         self.id = device.id
+        self.seq = 1
 
     def get_battery(self):
         return 60
