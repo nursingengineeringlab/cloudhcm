@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis
+spec:
+  selector:
+    matchLabels:
+      app: redis  
+  serviceName: redis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis 
+    spec:
+      containers:
+        - name: redis
+          image: redislabs/redis
+          ports:
+            - containerPort: 6379
+              name: redis
+          resources:
+            limits:
+              cpu: .50
+              memory: 1500Mi
+            requests:
+              cpu: .25
+              memory: 1024Mi
+          volumeMounts:
+            - name: redis-volume
+              mountPath: /data
+  volumeClaimTemplates:
+  - metadata:
+      name: redis-volume
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 10Gi

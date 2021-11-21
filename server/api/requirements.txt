@@ -1,0 +1,14 @@
+Django
+djangorestframework
+markdown
+django-filter
+psycopg2>=2.7,<3.0
+pika
+pyzmq
+django-cors-headers
+django-environ
+django-sslserver
+channels
+# django-redis
+django-async-redis
+aioredis
