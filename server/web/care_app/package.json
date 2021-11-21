@@ -1,0 +1,60 @@
+{
+  "name": "care_app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@nivo/core": "^0.74.0",
+    "@nivo/line": "^0.74.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "amqplib": "^0.8.0",
+    "antd": "^4.12.3",
+    "randomcolor": "^0.6.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-dotenv": "^0.1.0",
+    "react-gauge-chart": "^0.3.0",
+    "react-scripts": "^4.0.2",
+    "socket.io-client": "^4.0.0",
+    "web-vitals": "^1.0.1",
+    "websocket": "^1.0.34",
+    "zeromq": "^6.0.0-beta.6"
+  },
+  "scripts": {
+    "start": "HTTPS=true react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "NODESERVER_SERVICE_HOST",
+      "API_SERVICE_HOST"
+    ]
+  }
+}
