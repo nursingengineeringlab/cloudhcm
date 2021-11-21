@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  db:
+    build: ./db
+    ports:
+      - "5432:5432" # "HOST:CONTAINER"
+
+  api:
+    build: ./api
+    hostname: api
+    command: python care_api/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./api:/code
+    ports:
+      - "8002:8000" # Rest API
+      - "5456:5456" # ZeroMQ Port
+    depends_on:
+      - db
+
+  nodeserver:
+    build: ./node_server
+    hostname: nodeserver
+    volumes:
+      - ./node_server:/code
+    command: node middleman.js
+    ports:
+      - "3009:3001"
+      - "4000:4000"
+    depends_on:
+      - api
+
+  web:
+    build: ./web
+    stdin_open: true
+    command: npm start --prefix care_app/
+    volumes:
+      - './web:/code'
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
+      - api
+      - nodeserver
