@@ -1,0 +1,13 @@
+# PostgreSQL StatefulSet ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-db-config
+  labels:
+    app: postgresql-db
+data:
+  POSTGRES_DB: testdb
+  POSTGRES_USER: testdbuser
+  POSTGRES_PASSWORD: testdbuserpassword
+  PGDATA: /data/pgdata
+# https://www.bmc.com/blogs/kubernetes-postgresql/

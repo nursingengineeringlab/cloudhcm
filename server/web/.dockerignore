@@ -1,0 +1,6 @@
+node_modules
+care_app/node_modules
+build
+care_app/package-lock.json
+Dockerfile
+Dockerfile.prod
