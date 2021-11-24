@@ -87,7 +87,7 @@ def PingEndpoint(request):
         except Exception as e:
             return HttpResponse(status=500)
 
-        return HttpResponse(status=201) 
+        return HttpResponse(status=201)
 
     return HttpResponse(status=400)
 

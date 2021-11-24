@@ -19,7 +19,6 @@ class SensorDataConsumer(AsyncWebsocketConsumer):
         # self.device_id = self.scope['url_route']['kwargs']['device_id']
         self.device_id = 'test'
         self.device_group_name = self.device_id
-        # print("test$$$$$$$$$$$$$$$$$$$$$$")
         await self.channel_layer.group_add(
             self.device_group_name,
             self.channel_name
@@ -27,7 +26,7 @@ class SensorDataConsumer(AsyncWebsocketConsumer):
 
         await self.accept()
         # print("#######CONNECTED############")
-        print(self.device_group_name)
+        # print(self.device_group_name)
 
 
 
@@ -39,8 +38,8 @@ class SensorDataConsumer(AsyncWebsocketConsumer):
             self.channel_name
         )
 
-        # with onlineSeniorsDict as online_seniors:
-        #     del online_seniors[self.device_id]
+        with onlineSeniorsDict as online_seniors:
+            del online_seniors[self.device_id]
 
         # print("DISCONNECED CODE: ",code)
         # print("Device IDL ", self.device_id)
@@ -90,7 +89,6 @@ class SensorDataConsumer(AsyncWebsocketConsumer):
         )
 
     async def send_message_to_frontend(self,event):
-        # print("EVENT TRIGERED")
         # Receive message from room group
         message = event['message']
         # Send message to WebSocket

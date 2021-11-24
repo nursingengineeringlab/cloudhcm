@@ -100,7 +100,7 @@ const styles = {
     marginBottom: 40
   },
   watchlist_div2:{
-    borderRadius: 30, 
+    borderRadius: 30,
     borderWidth: 3,
     borderStyle: 'dashed',
     borderColor: '#d3d3d3', 
