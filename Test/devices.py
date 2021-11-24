@@ -4,7 +4,7 @@ import binascii
 import enum
 
 Device_Description = {
-    "RR": {
+    "RRI": {
         "id": 1,
         "watch_threshold_min": 600,
         "watch_threshold_max": 1200,
@@ -30,7 +30,7 @@ Device_Description = {
 
 class DeviceTypes(enum.Enum):
     ECG = 1
-    RR = 2
+    RRI = 2
     TEMP = 3
     SPO2 = 4
 
@@ -50,9 +50,9 @@ class Device:
         return self.value
 
 
-class RRDevice(Device):
+class RRIDevice(Device):
     def __init__(self, device_id=None):
-        Device.__init__(self, device_id, DeviceTypes.RR, noise_amplitude=10)
+        Device.__init__(self, device_id, DeviceTypes.RRI, noise_amplitude=10)
 
 
 class TemperatureDevice(Device):
